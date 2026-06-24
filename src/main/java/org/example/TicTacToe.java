@@ -20,6 +20,14 @@ public class TicTacToe {
         board = new Board();
     }
 
+    Board getBoard() {
+        return board;
+    }
+
+    Player getCurrentPlayer() {
+        return currentPlayer;
+    }
+
     public void start() {
 
         Scanner scanner = new Scanner(System.in);
@@ -96,7 +104,7 @@ public class TicTacToe {
         scanner.close();
     }
 
-    private void switchCurrentPlayer() {
+    void switchCurrentPlayer() {
 
         if (currentPlayer == player1) {
             currentPlayer = player2;
@@ -105,7 +113,7 @@ public class TicTacToe {
         }
     }
 
-    private boolean hasWinner() {
+    boolean hasWinner() {
 
         char m = currentPlayer.getMarker();
 
